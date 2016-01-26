@@ -14,12 +14,6 @@ use warnings;
 
 use Kernel::System::EmailParser;
 
-our @ObjectDependencies = qw(
-    Kernel::Config
-    Kernel::System::Log
-    Kernel::System::Ticket
-);
-
 sub new {
     my ( $Type, %Param ) = @_;
 
@@ -27,15 +21,20 @@ sub new {
     my $Self = {};
     bless( $Self, $Type );
 
+    # get needed objects
+    for my $Object( qw(ConfigObject TicketObject LogObject EncodeObject) ) {
+        $Self->{$Object} = $Param{$Object} || die "Got no $Object!";
+    }
+
     return $Self;
 }
 
 sub Run {
     my ( $Self, %Param ) = @_;
 
-    my $LogObject    = $Kernel::OM->Get('Kernel::System::Log');
-    my $TicketObject = $Kernel::OM->Get('Kernel::System::Ticket');
-    my $ConfigObject = $Kernel::OM->Get('Kernel::Config');
+    my $LogObject    = $Self->{LogObject};
+    my $TicketObject = $Self->{TicketObject};
+    my $ConfigObject = $Self->{ConfigObject};
 
     # check needed stuff
     for my $Needed (qw(Data Event Config UserID)) {
@@ -83,6 +82,7 @@ sub Run {
 
     # get plain address
     my $Parser = Kernel::System::EmailParser->new(
+        %{$Self},
         Mode => 'Standalone',
     );
 
