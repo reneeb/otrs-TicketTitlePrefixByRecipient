@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<otrs_config version="1.0" init="Config">
+    <ConfigItem Name="Ticket::EventModulePost###029-TitlePrefixByRecipient" Required="0" Valid="1">
+        <Description Translatable="1">.</Description>
+        <Group>TicketTitlePrefixByRecipient</Group>
+        <SubGroup>Core</SubGroup>
+        <Setting>
+            <Hash>
+                <Item Key="Module">Kernel::System::Ticket::Event::TitlePrefixByRecipient</Item>
+                <Item Key="Event">ArticleCreate</Item>
+            </Hash>
+        </Setting>
+    </ConfigItem>
+    <ConfigItem Name="TicketTitlePrefixByRecipient::Addresses" Required="0" Valid="1">
+        <Description Translatable="1">.</Description>
+        <Group>TicketTitlePrefixByRecipient</Group>
+        <SubGroup>Core</SubGroup>
+        <Setting>
+            <Hash>
+                <Item Key="mail@address.example">[Example Prefix]</Item>
+            </Hash>
+        </Setting>
+    </ConfigItem>
+</otrs_config>

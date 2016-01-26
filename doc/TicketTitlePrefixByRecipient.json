@@ -1,0 +1,16 @@
+{
+    "name": "TicketTitlePrefixByRecipient",
+    "version": "4.0.1",
+    "framework": [
+        "4.0.x"
+    ],
+    "vendor": {
+        "name":  "Perl-Services.de",
+        "url": "http://www.perl-services.de"
+    },
+    "license": "GNU AFFERO GENERAL PUBLIC LICENSE Version 3, November 2007",
+    "description" : {
+        "en": "Add a prefix to the ticket title based on the original recipient.",
+        "de": "Fügt einen Präfix zum Tickettitel hinzu - basierend auf dem Empfänger"
+    }
+}
