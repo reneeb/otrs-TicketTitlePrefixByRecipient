@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<otrs_package version="1.0">
+    <!-- GENERATED WITH OTRS::OPM::Maker::Command::sopm (1.33) -->
+    <Name>TicketTitlePrefixByRecipient</Name>
+    <Version>4.0.1</Version>
+    <Framework>4.0.x</Framework>
+    <Vendor>Perl-Services.de</Vendor>
+    <URL>http://www.perl-services.de</URL>
+    <Description Lang="de">Fügt einen Präfix zum Tickettitel hinzu - basierend auf dem Empfänger</Description>
+    <Description Lang="en">Add a prefix to the ticket title based on the original recipient.</Description>
+    <License>GNU AFFERO GENERAL PUBLIC LICENSE Version 3, November 2007</License>
+    <Filelist>
+        <File Permission="644" Location="Kernel/Config/Files/TicketTitlePrefixByRecipient.xml" />
+        <File Permission="644" Location="Kernel/System/Ticket/Event/TitlePrefixByRecipient.pm" />
+        <File Permission="644" Location="doc/TicketTitlePrefixByRecipient.json" />
+        <File Permission="644" Location="doc/en/TicketTitlePrefixByRecipient.pod" />
+    </Filelist>
+</otrs_package>
