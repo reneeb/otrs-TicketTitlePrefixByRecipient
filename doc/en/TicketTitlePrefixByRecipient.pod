@@ -1,0 +1,25 @@
+=head1 NAME
+
+TicketTitlePrefixByRecipient - Add a prefix to the ticket title based on the original recipient.
+
+=head1 DESCRIPTION
+
+Imagine, you have specific mailaddresses for some projects (to distinct communication). If you get
+many emails, you might want to see the project a ticket belongs to in the dashboard. For that you
+could use a "Prefix" for the ticket title.
+
+To set the prefix automatically when the ticket is created, you can use this addon. Just
+configure the "project" mail addresses and the prefix in the SysConfig and you're done...
+
+=head1 CODE REPOSITORY AND BUGTRACKER
+
+The code repository and a bugtracker is available at
+L<https://github.com/reneeb/otrs-TicketTitlePrefixByRecipient>.
+
+=head1 AUTHOR AND LICENSE
+
+This package was written by Renee Baecker E<lt>info@feature-addons.deE<gt>.
+
+The package is licensed unter AGPL. If you
+did not receive this file, see L<http://www.gnu.org/licenses/agpl.txt>.
+
